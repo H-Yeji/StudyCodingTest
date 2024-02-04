@@ -16,5 +16,10 @@ for i in s:
         else:
             cnt1 += 1
             n = i
+# 마지막 원소
+if s[len(s) - 1] == '0':
+    cnt0 += 1
+else:
+    cnt1 += 1
 
 print(min(cnt0, cnt1))
