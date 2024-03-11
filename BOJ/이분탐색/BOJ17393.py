@@ -1,4 +1,19 @@
 import sys
+from bisect import bisect_right
+
+input = sys.stdin.readline
+
+n = int(input())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+for i in range(n - 1):
+    result = bisect_right(b, a[i], lo=i + 1, hi=n)
+    print(result - i - 1, end=" ")
+
+print(0)
+'''
+import sys
 input = sys.stdin.readline
 
 n = int(input())
@@ -28,3 +43,4 @@ for i in range(n - 1):
             e = mid - 1
     print(result - i - 1, end=" ")
 print(0)
+'''
